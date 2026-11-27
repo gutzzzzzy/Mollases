@@ -46,7 +46,7 @@ jobs:
       - name: Re-sync beats.json to the voiceover (exact word times when words.json exists; falls back to the committed beats.json)
         run: |
           pip install numpy
-          sudo apt-get install -y ffmpeg
+          sudo apt-get update && sudo apt-get install -y ffmpeg
           python sandbox/pf3d/beats.py "${{ inputs.audio_path }}" prep/beats.json prep/words.json || cp sandbox/pf3d/beats.json prep/beats.json
           ls -la prep
       - uses: actions/upload-artifact@v4
