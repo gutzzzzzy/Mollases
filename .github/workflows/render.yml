@@ -1,0 +1,142 @@
+name: Render Great Molasses Flood video
+# Frames are rendered in 6 parallel shards (software WebGL is slow), then stitched + muxed with voiceover, captions and the SFX bed.
+on:
+  workflow_dispatch:
+    inputs:
+      aspect:
+        description: Aspect ratio (9:16 = 720x1280, 16:9 = 1280x720)
+        type: choice
+        default: '9:16'
+        options: ['9:16', '16:9']
+      fps:
+        description: Frames per second
+        type: choice
+        default: '24'
+        options: ['24', '30']
+      audio_path:
+        description: Voiceover path (relative to repo root)
+        type: string
+        default: assets/voiceover.mp3
+env:
+  SHARD_SECONDS: 20
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Arrange files (supports a flat upload of all files at repo root)
+        run: |
+          if [ -f film.js ] && [ ! -d sandbox/pf3d ]; then
+            mkdir -p sandbox/pf3d/vendor assets
+            mv camera.js fx.js world.js film.js engine.js main.js app.js hook.js render.mjs sfx.py transcribe.py beats.py analyze_audio.py beats.json timing_fixed.json package.json build.sh film_page.html page.html sandbox/pf3d/
+            mv three.min.js sandbox/pf3d/vendor/
+            [ -f voiceover.mp3 ] && mv voiceover.mp3 assets/
+          fi
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Captions (use assets/captions.json|srt if present, else faster-whisper)
+        run: |
+          mkdir -p prep
+          if [ -f assets/captions.json ]; then cp assets/captions.json prep/captions.json
+          elif [ -f assets/captions.srt ]; then cp assets/captions.srt prep/captions.srt
+          else pip install faster-whisper && python sandbox/pf3d/transcribe.py "${{ inputs.audio_path }}" prep/captions.json; fi
+          ls -la prep
+      - name: Re-sync beats.json to the voiceover (exact word times when words.json exists; falls back to the committed beats.json)
+        run: |
+          pip install numpy
+          sudo apt-get install -y ffmpeg
+          python sandbox/pf3d/beats.py "${{ inputs.audio_path }}" prep/beats.json prep/words.json || cp sandbox/pf3d/beats.json prep/beats.json
+          ls -la prep
+      - uses: actions/upload-artifact@v4
+        with:
+          name: captions
+          path: prep
+          if-no-files-found: ignore
+  shard:
+    needs: prep
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: true
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Arrange files (supports a flat upload of all files at repo root)
+        run: |
+          if [ -f film.js ] && [ ! -d sandbox/pf3d ]; then
+            mkdir -p sandbox/pf3d/vendor assets
+            mv camera.js fx.js world.js film.js engine.js main.js app.js hook.js render.mjs sfx.py transcribe.py beats.py analyze_audio.py beats.json timing_fixed.json package.json build.sh film_page.html page.html sandbox/pf3d/
+            mv three.min.js sandbox/pf3d/vendor/
+            [ -f voiceover.mp3 ] && mv voiceover.mp3 assets/
+          fi
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - uses: actions/download-artifact@v4
+        with:
+          name: captions
+          path: prep
+      - name: System deps
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Node deps + Playwright Chromium
+        working-directory: sandbox/pf3d
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+      - name: Build film.html
+        run: |
+          [ -f prep/beats.json ] && cp prep/beats.json sandbox/pf3d/beats.json
+          bash sandbox/pf3d/build.sh
+      - name: Render shard ${{ matrix.shard }}
+        working-directory: sandbox/pf3d
+        run: |
+          START=$(( ${{ matrix.shard }} * SHARD_SECONDS ))
+          CAP=$(ls "${{ github.workspace }}"/prep/captions.* | head -1)
+          node render.mjs --aspect "${{ inputs.aspect }}" --fps "${{ inputs.fps }}" --audio "${{ github.workspace }}/${{ inputs.audio_path }}" --video-only --captions "$CAP" --start $START --seconds $SHARD_SECONDS --out "${{ github.workspace }}/part_${{ matrix.shard }}.mp4"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: part-${{ matrix.shard }}
+          path: part_${{ matrix.shard }}.mp4
+          if-no-files-found: ignore
+  merge:
+    needs: shard
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Arrange files (supports a flat upload of all files at repo root)
+        run: |
+          if [ -f film.js ] && [ ! -d sandbox/pf3d ]; then
+            mkdir -p sandbox/pf3d/vendor assets
+            mv camera.js fx.js world.js film.js engine.js main.js app.js hook.js render.mjs sfx.py transcribe.py beats.py analyze_audio.py beats.json timing_fixed.json package.json build.sh film_page.html page.html sandbox/pf3d/
+            mv three.min.js sandbox/pf3d/vendor/
+            [ -f voiceover.mp3 ] && mv voiceover.mp3 assets/
+          fi
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          name: captions
+          path: prep
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: part-*
+          merge-multiple: true
+          path: parts
+      - name: Stitch + SFX + voiceover
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg && pip install numpy
+          for i in 0 1 2 3 4 5; do [ -f parts/part_$i.mp4 ] && echo "file 'parts/part_$i.mp4'" >> list.txt; done
+          ffmpeg -y -v error -f concat -safe 0 -i list.txt -c copy video.mp4
+          [ -f prep/beats.json ] && cp prep/beats.json sandbox/pf3d/beats.json
+          python sandbox/pf3d/sfx.py "${{ inputs.audio_path }}" sfx.wav
+          ffmpeg -y -v error -i video.mp4 -i "${{ inputs.audio_path }}" -i sfx.wav -filter_complex "[1:a]pan=stereo|c0=c0|c1=c0[v];[v][2:a]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -movflags +faststart -shortest output.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: molasses-flood-${{ inputs.aspect == '16:9' && '16x9' || '9x16' }}-${{ inputs.fps }}fps
+          path: output.mp4
+          if-no-files-found: ignore
+          
