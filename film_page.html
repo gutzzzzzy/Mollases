@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Great Molasses Flood — film</title>
+<style>
+html,body{margin:0;height:100%;background:#15101a;color:#f2e6d0;font:14px system-ui,sans-serif;overflow:hidden}
+#wrap{position:absolute;inset:0 0 118px 0;display:flex;align-items:center;justify-content:center}
+canvas{display:block;background:#000;max-width:100%;max-height:100%}
+#bar{position:absolute;left:0;right:0;bottom:0;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:#241a2b;display:flex;flex-wrap:wrap;gap:8px;align-items:center;min-height:102px;box-sizing:border-box}
+#bar button,#bar select,#bar label.b{background:#3b2c46;color:#f2e6d0;border:1px solid #5b4868;border-radius:8px;padding:9px 12px;font:inherit}
+#bar label.b input{display:none}
+#seek{flex:1 1 100%;width:100%}
+#time{font-variant-numeric:tabular-nums;opacity:.8}
+body.render #bar{display:none}body.render #wrap{inset:0;display:block}body.render canvas{max-width:none;max-height:none}
+</style></head><body>
+<div id="wrap"><canvas id="c"></canvas></div>
+<div id="bar">
+ <label class="b">Load audio<input id="aud" type="file" accept="audio/*,.mp3"></label>
+ <label class="b">SFX mix<input id="sfxf" type="file" accept="audio/*,.wav"></label>
+ <label class="b">Captions<input id="capf" type="file" accept=".srt,.json,application/json"></label>
+ <button id="play">Play</button><button id="asp">9:16</button><button id="cap">CC on</button>
+ <select id="scn"></select><span id="time">0:00</span>
+ <input id="seek" type="range" min="0" max="116" step="0.05" value="0">
+</div>
+<script>/*THREE*/</script><script>/*APP*/</script></body></html>

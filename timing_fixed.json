@@ -1,0 +1,226 @@
+{
+ "triggers": {
+  "suddenly": {
+   "design": -12.3,
+   "t": 1.8,
+   "source": "user-timeline",
+   "what": "shadow sweeps hero"
+  },
+  "water": {
+   "design": -10.1,
+   "t": 4.0,
+   "source": "user-timeline",
+   "what": "But instead of water: turquoise wave"
+  },
+  "jug": {
+   "design": -6.9,
+   "t": 7.2,
+   "source": "user-timeline",
+   "what": "two million gallons: jug cutaway"
+  },
+  "pancake": {
+   "design": -4.3,
+   "t": 9.8,
+   "source": "user-timeline",
+   "what": "And no, this isn't a pancake"
+  },
+  "y1919": {
+   "design": -0.3,
+   "t": 13.8,
+   "source": "user-timeline",
+   "what": "January 15th, 1919"
+  },
+  "harbor": {
+   "design": 7.7,
+   "t": 21.8,
+   "source": "user-timeline",
+   "what": "Caribbean / factories"
+  },
+  "ft50": {
+   "design": 13.9,
+   "t": 28.0,
+   "source": "user-timeline",
+   "what": "50 feet tall"
+  },
+  "leaks": {
+   "design": 16.1,
+   "t": 30.2,
+   "source": "user-timeline",
+   "what": "leaked constantly / groaned"
+  },
+  "post": {
+   "design": 23.4,
+   "t": 37.5,
+   "source": "user-timeline",
+   "what": "residents complained: newspaper"
+  },
+  "buckets": {
+   "design": 26.1,
+   "t": 40.2,
+   "source": "user-timeline",
+   "what": "buckets / free syrup"
+  },
+  "disaster": {
+   "design": 30.9,
+   "t": 45.0,
+   "source": "user-timeline",
+   "what": "giant metal disaster"
+  },
+  "cards": {
+   "design": 35.4,
+   "t": 49.5,
+   "source": "user-timeline",
+   "what": "firefighters playing cards"
+  },
+  "crates": {
+   "design": 37.9,
+   "t": 52.0,
+   "source": "user-timeline",
+   "what": "workers carrying crates"
+  },
+  "kids": {
+   "design": 39.9,
+   "t": 54.0,
+   "source": "user-timeline",
+   "what": "kids gathering firewood"
+  },
+  "clock": {
+   "design": 41.9,
+   "t": 56.0,
+   "source": "user-timeline",
+   "what": "12:40 clock"
+  },
+  "roar": {
+   "design": 44.9,
+   "t": 59.0,
+   "source": "user-timeline",
+   "what": "deafening metallic roar"
+  },
+  "burst": {
+   "design": 48.0,
+   "t": 62.2,
+   "source": "user-timeline",
+   "what": "The tank had burst"
+  },
+  "mph35": {
+   "design": 49.8,
+   "t": 64.0,
+   "source": "user-timeline",
+   "what": "35 miles per hour"
+  },
+  "smashing": {
+   "design": 53.8,
+   "t": 68.0,
+   "source": "user-timeline",
+   "what": "smashing buildings"
+  },
+  "vehicles": {
+   "design": 55.3,
+   "t": 69.5,
+   "source": "user-timeline",
+   "what": "sweeping away vehicles"
+  },
+  "elevated": {
+   "design": 57.8,
+   "t": 72.0,
+   "source": "user-timeline",
+   "what": "damaging the elevated railway"
+  },
+  "trapped": {
+   "design": 60.8,
+   "t": 75.0,
+   "source": "user-timeline",
+   "what": "trapped them"
+  },
+  "rescuers": {
+   "design": 64.3,
+   "t": 78.5,
+   "source": "user-timeline",
+   "what": "rescuers"
+  },
+  "firehouse": {
+   "design": 67.8,
+   "t": 82.0,
+   "source": "user-timeline",
+   "what": "collapsed firehouse"
+  },
+  "died21": {
+   "design": 73.3,
+   "t": 87.5,
+   "source": "user-timeline",
+   "what": "21 people died / 150 injured"
+  },
+  "boss": {
+   "design": 86.0,
+   "t": 92.5,
+   "source": "user-timeline",
+   "what": "company suggested sabotage"
+  },
+  "invest": {
+   "design": 91.0,
+   "t": 98.5,
+   "source": "user-timeline",
+   "what": "years of investigation"
+  },
+  "court": {
+   "design": 94.9,
+   "t": 101.0,
+   "source": "user-timeline",
+   "what": "held responsible"
+  },
+  "sunny": {
+   "design": 99.0,
+   "t": 105.0,
+   "source": "user-timeline",
+   "what": "smell of molasses"
+  },
+  "finale": {
+   "design": 105.0,
+   "t": 110.0,
+   "source": "user-timeline",
+   "what": "So remember..."
+  }
+ },
+ "map": [
+  [
+   -14.1,
+   0.0
+  ],
+  [
+   48.0,
+   62.2
+  ],
+  [
+   78.3,
+   92.5
+  ],
+  [
+   86.0,
+   92.5001
+  ],
+  [
+   91.0,
+   98.5
+  ],
+  [
+   94.9,
+   101.0
+  ],
+  [
+   99.0,
+   105.0
+  ],
+  [
+   105.0,
+   110.0
+  ],
+  [
+   113.5,
+   118.5
+  ],
+  [
+   114.5,
+   119.5
+  ]
+ ]
+}

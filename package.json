@@ -1,0 +1,8 @@
+{
+  "name": "pear-folk-molasses-film",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "bash build.sh", "render": "node render.mjs" },
+  "dependencies": { "playwright": "^1.49.0" },
+  "devDependencies": { "esbuild": "^0.24.0" }
+}

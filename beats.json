@@ -1,0 +1,609 @@
+{
+ "duration": 118.51,
+ "voiceover": "assets/voiceover.mp3",
+ "triggers": {
+  "suddenly": {
+   "design": -12.3,
+   "t": 1.8,
+   "source": "user-timeline",
+   "what": "shadow sweeps hero"
+  },
+  "water": {
+   "design": -10.1,
+   "t": 4.0,
+   "source": "user-timeline",
+   "what": "But instead of water: turquoise wave"
+  },
+  "jug": {
+   "design": -6.9,
+   "t": 7.2,
+   "source": "user-timeline",
+   "what": "two million gallons: jug cutaway"
+  },
+  "pancake": {
+   "design": -4.3,
+   "t": 9.8,
+   "source": "user-timeline",
+   "what": "And no, this isn't a pancake"
+  },
+  "y1919": {
+   "design": -0.3,
+   "t": 13.8,
+   "source": "user-timeline",
+   "what": "January 15th, 1919"
+  },
+  "harbor": {
+   "design": 7.7,
+   "t": 21.8,
+   "source": "user-timeline",
+   "what": "Caribbean / factories"
+  },
+  "ft50": {
+   "design": 13.9,
+   "t": 28.0,
+   "source": "user-timeline",
+   "what": "50 feet tall"
+  },
+  "leaks": {
+   "design": 16.1,
+   "t": 30.2,
+   "source": "user-timeline",
+   "what": "leaked constantly / groaned"
+  },
+  "post": {
+   "design": 23.4,
+   "t": 37.5,
+   "source": "user-timeline",
+   "what": "residents complained: newspaper"
+  },
+  "buckets": {
+   "design": 26.1,
+   "t": 40.2,
+   "source": "user-timeline",
+   "what": "buckets / free syrup"
+  },
+  "disaster": {
+   "design": 30.9,
+   "t": 45.0,
+   "source": "user-timeline",
+   "what": "giant metal disaster"
+  },
+  "cards": {
+   "design": 35.4,
+   "t": 49.5,
+   "source": "user-timeline",
+   "what": "firefighters playing cards"
+  },
+  "crates": {
+   "design": 37.9,
+   "t": 52.0,
+   "source": "user-timeline",
+   "what": "workers carrying crates"
+  },
+  "kids": {
+   "design": 39.9,
+   "t": 54.0,
+   "source": "user-timeline",
+   "what": "kids gathering firewood"
+  },
+  "clock": {
+   "design": 41.9,
+   "t": 56.0,
+   "source": "user-timeline",
+   "what": "12:40 clock"
+  },
+  "roar": {
+   "design": 44.9,
+   "t": 59.0,
+   "source": "user-timeline",
+   "what": "deafening metallic roar"
+  },
+  "burst": {
+   "design": 48.0,
+   "t": 62.2,
+   "source": "user-timeline",
+   "what": "The tank had burst"
+  },
+  "mph35": {
+   "design": 49.8,
+   "t": 64.0,
+   "source": "user-timeline",
+   "what": "35 miles per hour"
+  },
+  "smashing": {
+   "design": 53.8,
+   "t": 68.0,
+   "source": "user-timeline",
+   "what": "smashing buildings"
+  },
+  "vehicles": {
+   "design": 55.3,
+   "t": 69.5,
+   "source": "user-timeline",
+   "what": "sweeping away vehicles"
+  },
+  "elevated": {
+   "design": 57.8,
+   "t": 72.0,
+   "source": "user-timeline",
+   "what": "damaging the elevated railway"
+  },
+  "trapped": {
+   "design": 60.8,
+   "t": 75.0,
+   "source": "user-timeline",
+   "what": "trapped them"
+  },
+  "rescuers": {
+   "design": 64.3,
+   "t": 78.5,
+   "source": "user-timeline",
+   "what": "rescuers"
+  },
+  "firehouse": {
+   "design": 67.8,
+   "t": 82.0,
+   "source": "user-timeline",
+   "what": "collapsed firehouse"
+  },
+  "died21": {
+   "design": 73.3,
+   "t": 87.5,
+   "source": "user-timeline",
+   "what": "21 people died / 150 injured"
+  },
+  "boss": {
+   "design": 86.0,
+   "t": 92.5,
+   "source": "user-timeline",
+   "what": "company suggested sabotage"
+  },
+  "invest": {
+   "design": 91.0,
+   "t": 98.5,
+   "source": "user-timeline",
+   "what": "years of investigation"
+  },
+  "court": {
+   "design": 94.9,
+   "t": 101.0,
+   "source": "user-timeline",
+   "what": "held responsible"
+  },
+  "sunny": {
+   "design": 99.0,
+   "t": 105.0,
+   "source": "user-timeline",
+   "what": "smell of molasses"
+  },
+  "finale": {
+   "design": 105.0,
+   "t": 110.0,
+   "source": "user-timeline",
+   "what": "So remember..."
+  }
+ },
+ "map": [
+  [
+   -14.1,
+   0.0
+  ],
+  [
+   48.0,
+   62.2
+  ],
+  [
+   78.3,
+   92.5
+  ],
+  [
+   86.0,
+   92.5001
+  ],
+  [
+   91.0,
+   98.5
+  ],
+  [
+   94.9,
+   101.0
+  ],
+  [
+   99.0,
+   105.0
+  ],
+  [
+   105.0,
+   110.0
+  ],
+  [
+   113.5,
+   118.5
+  ],
+  [
+   114.5,
+   119.5
+  ]
+ ],
+ "speech": [
+  {
+   "s": 0.17,
+   "e": 1.8
+  },
+  {
+   "s": 2.05,
+   "e": 5.02
+  },
+  {
+   "s": 5.73,
+   "e": 6.73
+  },
+  {
+   "s": 6.99,
+   "e": 9.65
+  },
+  {
+   "s": 10.16,
+   "e": 10.56
+  },
+  {
+   "s": 10.89,
+   "e": 13.02
+  },
+  {
+   "s": 13.67,
+   "e": 14.69
+  },
+  {
+   "s": 15.03,
+   "e": 16.03
+  },
+  {
+   "s": 16.47,
+   "e": 16.96
+  },
+  {
+   "s": 17.25,
+   "e": 17.83
+  },
+  {
+   "s": 18.4,
+   "e": 19.54
+  },
+  {
+   "s": 19.82,
+   "e": 22.41
+  },
+  {
+   "s": 22.88,
+   "e": 25.11
+  },
+  {
+   "s": 25.36,
+   "e": 27.87
+  },
+  {
+   "s": 28.48,
+   "e": 30.38
+  },
+  {
+   "s": 30.72,
+   "e": 32.73
+  },
+  {
+   "s": 33.07,
+   "e": 33.43
+  },
+  {
+   "s": 33.66,
+   "e": 35.17
+  },
+  {
+   "s": 35.6,
+   "e": 36.87
+  },
+  {
+   "s": 37.14,
+   "e": 39.82
+  },
+  {
+   "s": 40.29,
+   "e": 43.22
+  },
+  {
+   "s": 43.5,
+   "e": 43.7
+  },
+  {
+   "s": 44.18,
+   "e": 44.82
+  },
+  {
+   "s": 45.11,
+   "e": 49.32
+  },
+  {
+   "s": 49.82,
+   "e": 50.6
+  },
+  {
+   "s": 50.88,
+   "e": 52.4
+  },
+  {
+   "s": 52.7,
+   "e": 54.37
+  },
+  {
+   "s": 54.63,
+   "e": 56.33
+  },
+  {
+   "s": 56.9,
+   "e": 57.3
+  },
+  {
+   "s": 57.53,
+   "e": 59.04
+  },
+  {
+   "s": 59.35,
+   "e": 62.07
+  },
+  {
+   "s": 62.47,
+   "e": 63.75
+  },
+  {
+   "s": 64.17,
+   "e": 67.27
+  },
+  {
+   "s": 67.42,
+   "e": 68.83
+  },
+  {
+   "s": 69.01,
+   "e": 73.78
+  },
+  {
+   "s": 74.22,
+   "e": 76.27
+  },
+  {
+   "s": 76.79,
+   "e": 77.17
+  },
+  {
+   "s": 77.55,
+   "e": 79.01
+  },
+  {
+   "s": 79.3,
+   "e": 81.61
+  },
+  {
+   "s": 82.12,
+   "e": 85.4
+  },
+  {
+   "s": 85.89,
+   "e": 87.34
+  },
+  {
+   "s": 87.59,
+   "e": 89.08
+  },
+  {
+   "s": 89.28,
+   "e": 91.22
+  },
+  {
+   "s": 91.8,
+   "e": 93.82
+  },
+  {
+   "s": 94.34,
+   "e": 98.2
+  },
+  {
+   "s": 98.77,
+   "e": 100.38
+  },
+  {
+   "s": 100.63,
+   "e": 102.63
+  },
+  {
+   "s": 102.79,
+   "e": 104.15
+  },
+  {
+   "s": 104.62,
+   "e": 105.63
+  },
+  {
+   "s": 106.11,
+   "e": 109.66
+  },
+  {
+   "s": 110.19,
+   "e": 110.87
+  },
+  {
+   "s": 111.27,
+   "e": 115.36
+  },
+  {
+   "s": 115.98,
+   "e": 118.36
+  }
+ ],
+ "pauses": [
+  {
+   "s": 5.02,
+   "e": 5.73,
+   "d": 0.71
+  },
+  {
+   "s": 9.65,
+   "e": 10.16,
+   "d": 0.51
+  },
+  {
+   "s": 10.56,
+   "e": 10.89,
+   "d": 0.33
+  },
+  {
+   "s": 13.02,
+   "e": 13.67,
+   "d": 0.65
+  },
+  {
+   "s": 14.69,
+   "e": 15.03,
+   "d": 0.34
+  },
+  {
+   "s": 16.03,
+   "e": 16.47,
+   "d": 0.44
+  },
+  {
+   "s": 17.83,
+   "e": 18.4,
+   "d": 0.57
+  },
+  {
+   "s": 22.41,
+   "e": 22.88,
+   "d": 0.47
+  },
+  {
+   "s": 27.87,
+   "e": 28.48,
+   "d": 0.61
+  },
+  {
+   "s": 30.38,
+   "e": 30.72,
+   "d": 0.34
+  },
+  {
+   "s": 32.73,
+   "e": 33.07,
+   "d": 0.34
+  },
+  {
+   "s": 35.17,
+   "e": 35.6,
+   "d": 0.43
+  },
+  {
+   "s": 39.82,
+   "e": 40.29,
+   "d": 0.47
+  },
+  {
+   "s": 43.7,
+   "e": 44.18,
+   "d": 0.48
+  },
+  {
+   "s": 49.32,
+   "e": 49.82,
+   "d": 0.5
+  },
+  {
+   "s": 52.4,
+   "e": 52.7,
+   "d": 0.3
+  },
+  {
+   "s": 56.33,
+   "e": 56.9,
+   "d": 0.57
+  },
+  {
+   "s": 59.04,
+   "e": 59.35,
+   "d": 0.31
+  },
+  {
+   "s": 62.07,
+   "e": 62.47,
+   "d": 0.4
+  },
+  {
+   "s": 63.75,
+   "e": 64.17,
+   "d": 0.42
+  },
+  {
+   "s": 73.78,
+   "e": 74.22,
+   "d": 0.44
+  },
+  {
+   "s": 76.27,
+   "e": 76.79,
+   "d": 0.52
+  },
+  {
+   "s": 77.17,
+   "e": 77.55,
+   "d": 0.38
+  },
+  {
+   "s": 81.61,
+   "e": 82.12,
+   "d": 0.51
+  },
+  {
+   "s": 85.4,
+   "e": 85.89,
+   "d": 0.49
+  },
+  {
+   "s": 91.22,
+   "e": 91.8,
+   "d": 0.58
+  },
+  {
+   "s": 93.82,
+   "e": 94.34,
+   "d": 0.52
+  },
+  {
+   "s": 98.2,
+   "e": 98.77,
+   "d": 0.57
+  },
+  {
+   "s": 104.15,
+   "e": 104.62,
+   "d": 0.47
+  },
+  {
+   "s": 105.63,
+   "e": 106.11,
+   "d": 0.48
+  },
+  {
+   "s": 109.66,
+   "e": 110.19,
+   "d": 0.53
+  },
+  {
+   "s": 110.87,
+   "e": 111.27,
+   "d": 0.4
+  },
+  {
+   "s": 115.36,
+   "e": 115.98,
+   "d": 0.62
+  }
+ ]
+}

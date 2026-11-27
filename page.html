@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pear Folk 3D</title>
+<style>
+:root{--bg:#efe3cf;--panel:#fbf4e6;--ink:#2b1a2a;--acc:#b9546e;--line:#d8c6a8}
+@media (prefers-color-scheme:dark){:root{--bg:#241b22;--panel:#322630;--ink:#f3e8da;--acc:#e08aa0;--line:#4a3a48}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.4 system-ui,sans-serif}
+.wrap{display:grid;grid-template-columns:290px 1fr;gap:16px;max-width:1100px;margin:0 auto;padding:16px}
+@media(max-width:760px){.wrap{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;gap:9px;align-content:start}
+label{display:grid;min-width:0;gap:3px;font-weight:600;font-size:12px}select,input,button{min-width:0;width:100%;font:inherit;padding:7px 8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+input[type=range]{padding:0;accent-color:var(--acc)}button{cursor:pointer;background:var(--acc);color:#fff;border:0;font-weight:700}button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}button.on{outline:2px solid var(--acc)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:8px}h1{font-size:18px;margin:0}small{opacity:.7}
+.stage{background:var(--panel);border:1px solid var(--line);border-radius:12px;position:relative;height:min(78vh,720px);min-height:460px;overflow:hidden}
+canvas{width:100%;height:100%;display:block;cursor:grab}canvas:active{cursor:grabbing}
+.hint{position:absolute;left:0;right:0;bottom:8px;text-align:center;font-size:12px;opacity:.6;pointer-events:none}
+</style></head><body><div class="wrap"><div class="panel"><h1>Pear Folk 3D</h1><small>1919 Boston · primitive rig · cel-shaded</small>
+<div class="row"><label>Gender<select id="sex"><option value="male">Male</option><option value="female">Female</option></select></label><label>Body<select id="type"></select></label></div>
+<label>Heritage<select id="her"></select></label><label>Hairstyle<select id="hair"></select></label>
+<label id="fhl">Facial hair<select id="fh"></select></label>
+<div class="row"><label>Headwear<select id="hat"></select></label><label>Outfit<select id="outfit"></select></label></div>
+<div class="row"><label>Face style<select id="face"></select></label><label>Expression<select id="expr"></select></label></div>
+<label>Turntable <span id="yv">0°</span><input id="yaw" type="range" min="0" max="359" value="0"></label>
+<div class="row"><button class="alt" id="spin" type="button">▶ Spin</button><label style="margin:0">Animation<select id="anim"></select></label></div>
+<label>Seed<input id="seed" value="pear-3d"></label><button id="rnd" type="button">Randomize</button></div>
+<div class="stage"><canvas id="cv"></canvas><div class="hint">drag (mouse or touch) to rotate 360°</div></div></div>
+<script>/*THREE*/</script><script>/*APP*/</script></body></html>
